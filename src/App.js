@@ -16,6 +16,7 @@ const emojiDictionary = {
   "😎": "cool"
 };
 
+var emojiWeKnow = Object.keys(emojiDictionary);
 
 function App() {
 
