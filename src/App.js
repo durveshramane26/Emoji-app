@@ -16,17 +16,28 @@ const emojiDictionary = {
   "😎": "cool"
 };
 
+
 function App() {
+
+  const [meaning, setmeaning] = useState("");
 
   function emojiInputHandler(event) {
     var userInput = event.target.value;
+
+    var meaning = emojiDictionary[userInput];
+
+    if(meaning === undefined) {
+      meaning = "we dont have this in our database";
+    }
+
+    setmeaning(meaning);
 
   }
   return (
     <div className="App">
       <h1> Inside out </h1>
       <input onChange={emojiInputHandler}></input>
-      <h2>{}</h2>
+      <h2>{meaning}</h2>
     </div>
   );
 }
