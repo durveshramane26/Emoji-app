@@ -3,9 +3,25 @@ import './App.css';
 import React, { useState } from 'react';
 
 
+const emojiDictionary = {
+  "😊": "Smiling",
+  "😳": "disbelief",
+  "😔": "sad",
+  "🥡": "takeout box",
+  "❤️": "love",
+  "😑": "annoyance",
+  "✔": "correct",
+  "👏": "clap",
+  "🙌": "high five",
+  "😎": "cool"
+};
+
 function App() {
 
-  function emojiInputHandler(event) {}
+  function emojiInputHandler(event) {
+    var userInput = event.target.value;
+
+  }
   return (
     <div className="App">
       <h1> Inside out </h1>
