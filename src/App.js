@@ -34,11 +34,30 @@ function App() {
     setmeaning(meaning);
 
   }
+
+  function emojiClickHandler(emoji) {
+    var meaning = emojiDictionary[emoji];
+    setmeaning(meaning);
+  }
   return (
     <div className="App">
       <h1> Inside out </h1>
       <input onChange={emojiInputHandler}></input>
       <h2>{meaning}</h2>
+
+      <h3> emojis we know </h3>
+      {emojiWeKnow.map(function (emoji) {
+        return (
+          <span
+            onClick={() => emojiClickHandler(emoji)}
+            style = {{ fontSize: "2em", padding: "0.5rem", cursor: "pointer" }}
+            key = {emoji}
+            >
+            {emoji}
+          </span>
+
+        )
+      })}
     </div>
   );
 }
